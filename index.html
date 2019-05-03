@@ -65,6 +65,17 @@
             .Ycode{
                 padding-bottom: 10px;
             }
+            .qrcodeTitle{
+                position: relative;
+                width: 90% ;
+                margin: 0 auto ;
+                float: none;
+            }
+            .qrcodeClose{
+                position: absolute;
+                top: 0;
+                right: 0 ;
+            }
 
     </style>
 <body>
@@ -93,8 +104,10 @@
             <div id="mask"></div>
             <div class="weixin_al">
                 <div class="weixin-qcode" style="">
-                    <div class="qrcodeTitle" style="">扫描二维码</div>
-                    <div class="qrcodeClose" style=""> x </div>
+                    <div class="qrcodeTitle" style="">扫描二维码
+                            <div class="qrcodeClose" style=""> x </div>
+                    </div>
+                    
                     <div class="Ycode">
                         <img src="./img/jiade.png" alt="">
                     </div>
@@ -198,24 +211,24 @@ Zepto(function($){
     ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
     });  
 
-    // wx.ready(function () {
-	// 	share();
-    //      $('.wei').click(function(){
-    //          wx.onMenuShareAppMessage({
-    //             title: msgTitle, // 分享标题
-    //             desc: msgDesc, // 分享描述
-    //             link: msgLink,
-    //             imgUrl: msgImgurl,
-    //             success: function () {
-    //                 // 用户确认分享后执行的回调函数
-    //                 //$(".share").hide();
-    //             },
-    //             fail: function () {
-    //                 alert("分享失败");
-    //             }
-    //         });
-    //       })
-    // });
+    wx.ready(function () {
+		share();
+         $('.wei').click(function(){
+             wx.onMenuShareAppMessage({
+                title: msgTitle, // 分享标题
+                desc: msgDesc, // 分享描述
+                link: msgLink,
+                imgUrl: msgImgurl,
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    //$(".share").hide();
+                },
+                fail: function () {
+                    alert("分享失败");
+                }
+            });
+          })
+    });
 </script>
 <script type="text/javascript" src="http://home.darryring.com/bundles/acmefrontend/zonejs/jquery-1.10.1.min.js"></script>
  <script type="text/javascript" src="http://home.darryring.com/bundles/acmefrontend/zonejs/jquery.qrcode.min.js"></script>

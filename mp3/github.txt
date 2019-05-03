@@ -1,16 +1,16 @@
 git init
 git add .
-git commit -m "dr2"
+git commit -m "dr3"
 git config --global user.email '743360298@qq.com'
 git config --global user.name '743360298'
-git commit -m "dr2"
+git commit -m "dr3"
 git push
 git checkout -b gh-pages
 git status
-git push https://github.com/743360298/DR2.0.git gh-pages
+git push https://github.com/743360298/DR3.0.git gh-pages
 
 
-git push https://github.com/743360298/DR2.0.git gh-pages
-https://github.com/743360298/DR2.0.git
+git push https://github.com/743360298/DR3.0.git gh-pages
+https://github.com/743360298/DR3.0.git
 
-https://743360298.github.io/dr2.0/index.html  打开例子
+https://743360298.github.io/dr3.0/index.html  打开例子

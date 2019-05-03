@@ -58,6 +58,15 @@
         </script>
 		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
+     <style>
+            .weixin-qcode{
+                background-color: #fff ;
+            }
+            .Ycode{
+                padding-bottom: 10px;
+            }
+
+    </style>
 <body>
 <div class="wish_cort">
         <div class="wish_cp">
@@ -86,7 +95,10 @@
                 <div class="weixin-qcode" style="">
                     <div class="qrcodeTitle" style="">扫描二维码</div>
                     <div class="qrcodeClose" style=""> x </div>
-                    <div id="qrcodeTable" style=""></div>
+                    <div class="Ycode">
+                        <img src="./img/jiade.png" alt="">
+                    </div>
+                    <!-- <div id="qrcodeTable" style=""></div> -->
                 </div>
         </div>
         <!-- 微信二维码 -->
@@ -186,26 +198,24 @@ Zepto(function($){
     ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
     });  
 
-    wx.ready(function () {
-		share();
-         // $('.wei').click(function(){
-
-         
-         //     wx.onMenuShareAppMessage({
-         //        title: msgTitle, // 分享标题
-         //        desc: msgDesc, // 分享描述
-         //        link: msgLink,
-         //        imgUrl: msgImgurl,
-         //        success: function () {
-         //            // 用户确认分享后执行的回调函数
-         //            //$(".share").hide();
-         //        },
-         //        fail: function () {
-         //            alert("分享失败");
-         //        }
-         //    });
-         //  })
-    });
+    // wx.ready(function () {
+	// 	share();
+    //      $('.wei').click(function(){
+    //          wx.onMenuShareAppMessage({
+    //             title: msgTitle, // 分享标题
+    //             desc: msgDesc, // 分享描述
+    //             link: msgLink,
+    //             imgUrl: msgImgurl,
+    //             success: function () {
+    //                 // 用户确认分享后执行的回调函数
+    //                 //$(".share").hide();
+    //             },
+    //             fail: function () {
+    //                 alert("分享失败");
+    //             }
+    //         });
+    //       })
+    // });
 </script>
 <script type="text/javascript" src="http://home.darryring.com/bundles/acmefrontend/zonejs/jquery-1.10.1.min.js"></script>
  <script type="text/javascript" src="http://home.darryring.com/bundles/acmefrontend/zonejs/jquery.qrcode.min.js"></script>
@@ -215,9 +225,9 @@ window.onload = function(){
     function isWeiXin(){ 
         var ua = window.navigator.userAgent.toLowerCase(); 
         if(ua.match(/MicroMessenger/i) == 'micromessenger'){ 
-            // $(".wish_button").click(function(){
-            //     $(".showall").show();
-            // })
+            $(".wish_button").click(function(){
+                $(".showall").show();
+            })
             $(".showall").click(function(){
                 $(this).hide();
             });
@@ -232,9 +242,9 @@ window.onload = function(){
             text    : "https://home.darryring.com/NzEwMzAx"
             });
             
-            // $('.wish_button').click(function() {
-            //     $("#mask, .weixin_al").show();
-            // });
+            $('.wish_button').click(function() {
+                $("#mask, .weixin_al").show();
+            });
             $('.qrcodeClose').click(function() {
                 $("#mask, .weixin_al").hide();
             });
